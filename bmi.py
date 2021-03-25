@@ -16,3 +16,7 @@ BMI = weight / (height/100)**2
 
 # BMI Calculation Result Output (weight / height)
 print ("your BMI is {} " .format (BMI)) 
+
+
+# References
+# LN 15 - https://www.includehelp.com/python/bmi-body-mass-index-calculator.aspx - BMI Calculation 
