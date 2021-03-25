@@ -17,6 +17,10 @@ BMI = weight / (height/100)**2
 # BMI Calculation Result Output (weight / height)
 print ("your BMI is {} " .format (BMI)) 
 
+# display / round to 2 decimal places 
+print ("your BMI is {} " .format(round (BMI),2))
+
 
 # References
 # LN 15 - https://www.includehelp.com/python/bmi-body-mass-index-calculator.aspx - BMI Calculation 
+# Ln 21 - https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points - Limit BMI Result to 2 dec.    .format(round answer, 2) 
