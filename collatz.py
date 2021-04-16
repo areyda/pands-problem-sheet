@@ -3,21 +3,35 @@
 # Author: Amy Reynolds
 
 # References
-# Ln 13-25 - https://www.reddit.com/r/Python/comments/57r6bf/collatz_conjecture_program/
+# Ln 9-21 - https://en.wikipedia.org/wiki/Collatz_conjecture - defining function
+
+# Define the collatz function 
+def f(number):
+    # Using the modulo operator with a modulus of 2, to determine if the number is even
+    # Return and divide the number by 2 (// is used to ensure that an integer value is outputted instead of a floating value)
+    if (number%2) ==0:
+        return (number//2)
+    
+    # Otherwise (in this case if the number is odd), return and multiply the number by 3 and add 1.
+    elif number %2 ==1:
+        return (3*number) +1 
+    
+    # Otherwise return None if the above conditions are not met. 
+    else:
+        return None
+
+def collatz(number):
+    # Continue looping until the number = 1
+    # Output the current value of the number 
+    while number!=1:
+        # Output current value of the number (inputted number)
+        print (number)
+        # Apply function to number as defined above
+        number = f(number)
+        # return number  or return 1 (in this case the value is 1 - outside of while loop) - avoids the return of None as described above
+    return number
 
 # Request the user to input a positive integer
-number = int(input ("Please enter a positive integer: "))
-
-# Continue looping until the number = 1
-    # Output the current value of the number 
-while number!=1:
-    print (number)
-    # Using the modulo operator with a modulus of 2, to determine if the number is even
-    # Divide the number by 2 (// is used to ensure that an integer value is outputted instead of a float)
-    if (number%2) == 0:
-        number = (number//2)
-    # Otherwise (in this case if the number is odd), multiply the number by 3 and add 1.
-    else:
-        number= ((number*3)+1)
-# Output number (in this case the value is 1 - outside of while loop)
-print(number)
+number = int(input("Enter a positive integer: "))
+# Output values after function applied 
+print (collatz(number)) 
